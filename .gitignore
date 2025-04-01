@@ -77,7 +77,7 @@ test-results/
 # GitHub
 .DS_Store
 .git/
-.github/
+
 
 # Terraform / AWS/GCP infra
 .terraform/
@@ -87,4 +87,3 @@ test-results/
 # Secrets / Sensitive
 .env
 *.secrets
-.idea/
