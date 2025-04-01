@@ -49,6 +49,9 @@ dmypy.json
 # VSCode
 .vscode/
 
+#intellij
+.idea/
+
 # Pre-commit
 .pre-commit-config.yaml
 
@@ -86,3 +89,4 @@ test-results/
 # Secrets / Sensitive
 .env
 *.secrets
+.idea/
