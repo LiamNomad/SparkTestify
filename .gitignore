@@ -52,8 +52,6 @@ dmypy.json
 #intellij
 .idea/
 
-# Pre-commit
-.pre-commit-config.yaml
 
 # Logs
 *.log
