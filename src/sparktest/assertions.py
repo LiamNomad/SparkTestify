@@ -36,4 +36,6 @@ def assert_schema_equal(df: DataFrame, expected_schema: str):
     """
     actual_schema = df.schema.simpleString()
     if actual_schema != expected_schema:
-        raise AssertionError(f"Schema does not match:\nExpected: {expected_schema}\nActual:   {actual_schema}")
+        raise AssertionError(
+            f"Schema does not match:\nExpected: {expected_schema}\nActual:   {actual_schema}"
+        )

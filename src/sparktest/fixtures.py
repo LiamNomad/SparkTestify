@@ -3,6 +3,7 @@
 import pytest
 from pyspark.sql import SparkSession
 
+
 @pytest.fixture(scope="session")
 def spark():
     """
@@ -13,11 +14,12 @@ def spark():
     - Automatically tears down after all tests finish.
     """
     spark_session = (
-        SparkSession.builder
-        .appName("SparkTestifyTestSession")
+        SparkSession.builder.appName("SparkTestifyTestSession")
         .master("local[*]")  # Uses all local cores for parallelism
         .config("spark.ui.enabled", "false")  # No need for Spark UI in test
-        .config("spark.sql.shuffle.partitions", "2")  # Small shuffle partitions for faster tests
+        .config(
+            "spark.sql.shuffle.partitions", "2"
+        )  # Small shuffle partitions for faster tests
         .getOrCreate()
     )
     yield spark_session

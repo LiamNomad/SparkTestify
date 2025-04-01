@@ -1,4 +1,3 @@
-from sparktest.fixtures import spark
 from sparktest.assertions import assert_dataframe_equal, assert_schema_equal
 from sparktest.mocks import create_mock_dataframe
 

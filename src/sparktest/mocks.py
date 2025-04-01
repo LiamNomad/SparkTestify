@@ -1,10 +1,13 @@
 # src/sparktest/mocks.py
 
-from pyspark.sql import SparkSession, DataFrame
 from typing import List, Tuple
 
+from pyspark.sql import DataFrame, SparkSession
 
-def create_mock_dataframe(spark: SparkSession, data: List[Tuple], schema: List[str]) -> DataFrame:
+
+def create_mock_dataframe(
+    spark: SparkSession, data: List[Tuple], schema: List[str]
+) -> DataFrame:
     """
     Create a mock DataFrame from data and schema.
 
