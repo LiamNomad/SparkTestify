@@ -3,8 +3,13 @@ from typing import Optional
 import pytest
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as func
-from pyspark.sql.types import (BooleanType, IntegerType, StringType,
-                               StructField, StructType)
+from pyspark.sql.types import (
+    BooleanType,
+    IntegerType,
+    StringType,
+    StructField,
+    StructType,
+)
 
 from sparktest import assert_spark_function, assert_udf
 
