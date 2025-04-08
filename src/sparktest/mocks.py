@@ -1,5 +1,3 @@
-# src/sparktest/mocks.py
-
 from typing import List, Tuple
 
 from pyspark.sql import DataFrame, SparkSession

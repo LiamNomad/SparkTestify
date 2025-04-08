@@ -21,13 +21,13 @@ pip install sparktestify
 
 ```python
 from sparktest.assertions import assert_dataframe_equal
-from sparktest.fixtures import spark
+from sparktest.fixtures import spark_session
 
 
-def test_my_transformation(spark):
-    input_df = spark.createDataFrame([...])
+def test_my_transformation(spark_session):
+    input_df = spark_session.createDataFrame([...])
     output_df = my_transformation(input_df)
-    expected_df = spark.createDataFrame([...])
+    expected_df = spark_session.createDataFrame([...])
     assert_dataframe_equal(output_df, expected_df)
 ```
 

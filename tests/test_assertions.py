@@ -2,23 +2,23 @@ from sparktest.assertions import assert_dataframe_equal, assert_schema_equal
 from sparktest.mocks import create_mock_dataframe
 
 
-def test_dataframe_equality(spark):
+def test_dataframe_equality(spark_session):
     data = [(1, "Alice"), (2, "Bob")]
     schema = ["id", "name"]
 
-    df1 = create_mock_dataframe(spark, data, schema)
-    df2 = create_mock_dataframe(spark, data, schema)
+    df1 = create_mock_dataframe(spark_session, data, schema)
+    df2 = create_mock_dataframe(spark_session, data, schema)
 
     assert_dataframe_equal(df1, df2)
 
 
-def test_dataframe_inequality(spark):
+def test_dataframe_inequality(spark_session):
     data1 = [(1, "Alice"), (2, "Bob")]
     data2 = [(1, "Alice"), (3, "Charlie")]
     schema = ["id", "name"]
 
-    df1 = create_mock_dataframe(spark, data1, schema)
-    df2 = create_mock_dataframe(spark, data2, schema)
+    df1 = create_mock_dataframe(spark_session, data1, schema)
+    df2 = create_mock_dataframe(spark_session, data2, schema)
 
     try:
         assert_dataframe_equal(df1, df2)
@@ -28,11 +28,11 @@ def test_dataframe_inequality(spark):
         assert False
 
 
-def test_schema_equality(spark):
+def test_schema_equality(spark_session):
     data = [(1, "Alice"), (2, "Bob")]
     schema = ["id", "name"]
 
-    df = create_mock_dataframe(spark, data, schema)
+    df = create_mock_dataframe(spark_session, data, schema)
 
     expected_schema = "struct<id:bigint,name:string>"
 
