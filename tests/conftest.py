@@ -1,1 +1,1 @@
-from sparktest.fixtures import spark  # noqa: F401
+from sparktest.fixtures import spark_session  # noqa: F401

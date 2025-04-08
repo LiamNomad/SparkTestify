@@ -1,5 +1,3 @@
-# src/sparktest/assertions.py
-
 from pyspark.sql import DataFrame
 
 
